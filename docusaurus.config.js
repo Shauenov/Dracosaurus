@@ -8,6 +8,9 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "My Site",
@@ -52,6 +55,8 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         blog: {
           showReadingTime: true,
