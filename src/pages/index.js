@@ -7,6 +7,21 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
+import React from 'react';
+import FeatureDisplay from './_featureDisplay.mdx';
+import MDXContent from '@theme/MDXContent';
+
+export default function LandingPage() {
+  return (
+    <div>
+      <MDXContent>
+        <FeatureDisplay />
+      </MDXContent>
+    </div>
+  );
+}
+
+
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
