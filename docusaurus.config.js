@@ -50,6 +50,15 @@ const config = {
 
   presets: [
     [
+      "./src/presets/docusaurus-preset-multi-docs.js",
+      {
+        theme: { hello: "world" },
+        docs1: { path: "/docs" },
+        docs2: { path: "/community" },
+        docs3: { path: "/api" },
+      },
+    ],
+    [
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
 
